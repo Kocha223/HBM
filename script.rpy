@@ -14,7 +14,7 @@ define n = Character ("Matthew")
 
 label start:
 
-    scene
+    scene black
 
     "Crewman" "\"Doctor? Doctor are you awake?\""
 
@@ -42,13 +42,13 @@ label start:
 
     show ship stormy with fade
 
-    "The ship lurches beneath me, and I grab hold of the railing as men stumble across the deck. Up above, sailors tossed from their perches on the yards swing like ornaments as they hang on for dear life."
+    "The ship lurches beneath me, and I grab hold of the railing as men stumble across the deck."
 
     "The water rises and falls, churning like a boiling pot. How did we ever get into this mess?"
 
     a "\"Where is he?\""
 
-    "I shout to be heard, and the crewman leads me over to a crowd of men by the {i}Raider's{/i} mainmast. Above, the mainmast groans under the press of sail."
+    "I shout to be heard, and the crewman leads me over to a crowd of men by the {i}Raider's{/i} mainmast."
 
     a "\"Move aside, you men!\""
 
@@ -62,7 +62,7 @@ label start:
 
     "I realize the truth of his words just a moment too late."
 
-    "Lightning strikes the lower mainmast, and it tears free with a hideous crack. The mast falls into the violent seas to windward, dragging its rigging behind like an anchor chain."
+    "Lightning strikes the mainmast, and it tears free with a hideous crack. The mast falls into the violent sea to windward, dragging its rigging behind like an anchor chain."
 
     "The boat groans, slows, and then begins to turn into the wind."
 
@@ -72,7 +72,7 @@ label start:
 
     "I let out a shrill yell as the wave drags me along with it. I grope for a line, the taffrail, anything! But it's no use. The wave carries me bodily over the side, into the dark waters below."
 
-    scene
+    scene black with fade
 
     "Waves. The sea's beating heart."
 
@@ -80,35 +80,39 @@ label start:
 
     show beach with fade
 
-    "Wreckage litters the surf. Fifty or so yards out, a the {i}Raider’s{/i} battered topmast protrudes from the water like a grave marker.  Its tattered sails flap noisily in the wind.  The rigging hangs like a line of nooses waiting for the condemned."
+    "Wreckage litters the surf. Fifty or so yards out, a the {i}Raider’s{/i} battered topmast protrudes from the water like a grave marker."
 
-    "I groan and struggle to stand.  The moment I think I'm steady, my right ankle gives way, and I fall to my knees in the hot sand."
+    "I groan and struggle to stand. The moment I think I'm steady, my right ankle gives way, and I fall to my knees in the hot sand."
 
     "I blink as spots fill my vision, and my throat tightens with thirst. My voice is so hoarse it's almost unrecognizable."
 
     a "\"Ugh. Alrich's blood, where am I?\""
 
-    "The jungle ahead is an impenetrable wall of foliage. It stretches down the coast in either direction, a distance so great that the green melds with the horizon’s blue.  A mountain dominates the island’s center. Its flat, tree-lined top brings to mind the dormant volcano common to the northern reaches of Arche Draconia."
+    "The jungle ahead is an impenetrable wall of foliage. It stretches down the coast in either direction, a distance so great that the green melds with the horizon’s blue.center."
 
-    "This must be one of the islands off the Tetran coast… They’re supposed to be crawling with monsterfolk."
+    "This must be one of the islands off the Tetran coast. The Lorcan mariners call them the Stripes. So the stories go, the islands are crawling with monsterfolk."
 
-    "I begin my long crawl inland. I gasp as my right foot drags in the sand. My head sags as another wave of fatigue and hunger washes over me."
+    "Damn fine luck. I must be a hundred leagues from Tetra Magna. I may as well be on the shores of Arche Draconia."
 
-    "Damn fine luck. On the one hand, I was swept overboard. On the other, if the mainmast hadn’t fallen, I'd have had nothing to cling to. I suppose fate has a way of evening things out."
+    "On the other hand, the storm didn't take my necklace or bag. I suppose fate has a way of evening things out."  
 
-    "The storm may have ripped off my shirt and boots, but it didn't take my necklace.  I wrap my hand around the votive pendant, marked with the emblem of Lord Alrich.  I'm not one for religion, but a prayer every now and then never hurt."
+    "I wrap my hand around the votive necklace, marked with the emblem of Lord Alrich. I'm usually not one for religion, but a prayer every now and then never hurt."
 
-    "I try to recall what I was told about these islands. Other than the human settlements of Port Harken and Free Harbor, the islands were entirely populated by beastfolk."
+    "Especially this far from home."
 
-    "There were monsters back home in Cassia too, but they'd lived around humans for centuries.  The Tetran continent was different. Stories abound of sailors stranded, taken in by the locals, and {i}used{/i}."
+    "I try to recall what I was told about these islands. Other than the human settlements of Port Harken and Free Harbor, the islands were entirely populated by monsters."
 
-    "They were always meant as a warning, but it didn't sound like much of a punishment to me. How did Father put it? Drowning in pussy wasn't far off from drowning in gold. You'll die all the same, but at least you're grinning start to... finish."
+    "And not monsterfolk like those back home in Cassia, who've lived and intermarried with humans for centuries." 
+
+    "The Tetran continent was different. Stories abound of sailors stranded, taken in by the locals, and {i}used{/i}."
+
+    "The stories were always meant as a warning, but it didn't sound like much of a punishment to me." 
+
+    "How did Father put it? Drowning in pussy wasn't far off from drowning in gold. You'll die all the same, but at least you're grinning start to... finish."
 
     "I grit my teeth as I drag my weary form through the brush. The thirst is almost unbearable. Every shake of my head sends stars dancing across my vision."
 
     "Ahead, I hear the trickle of running water. The faint noise echoes in my head as my body screams at me. I scramble onward in a frenzy. I burst through a wall of foliage and collapse gasping on a bed of soft, damp grass."
-
-    scene
 
     show lagoon with fade
 
@@ -122,31 +126,33 @@ label start:
 
     window hide
 
-    show lagooncg:
-        xpos 0 ypos -770
-        linear 3.0 xpos 0 ypos 0
+    show lagooncg1:
+        xpos 0 ypos -770 zoom 1.25
+        linear 3.0 xpos 0 ypos 0 zoom 1.25
+    with fade
 
     pause 5
 
-    show lagooncg:
+    show lagooncg1:
         xpos -3750 ypos -1500 zoom 2
         linear 6.0 xpos -3750 ypos -300 zoom 2
+    with fade
 
     pause 8
 
-    "My gaze trails up their nude forms, pausing upon the spots dotting their thighs and shoulders, and again on their rounded, feline ears. Beastfolk.  Jaguars to be precise."
+    "My gaze trails up their nude forms, pausing upon the spots dotting their thighs and shoulders, and again on their rounded, feline ears. Monsterfolk. Jaguars to be precise."
 
-    show lagooncg:
-        xalign 1.0 yalign 1 zoom 0.70
+    show lagooncg1:
+        xalign 1.0 yalign 1 zoom 0.65
     with dissolve
 
-    "The two glance at each other, then back at me, their tails swishing curiously behind them. The first, a lithe girl with a fringe of sunkissed hair and sharp features, gives me a contemptuous sneer from atop the ridge."
+    "The two glance at each other, then back at me, their tails swishing curiously behind them. The first, a lithe girl with a fringe of sunkissed hair and sharp features, gives me a contemptuous sneer."
 
-    "The other, though clearly family, is almost her opposite. Her full body oozes sensuality. My eyes are drawn again and again to her thick, welcoming thighs."
+    "The other is almost her opposite. Her full body oozes sensuality. My eyes are drawn again and again to her thick, welcoming thighs."
 
-    "No doubt strong enough to squeeze the life out of me, but I can’t help but wonder what it’s like to lie between them. She smiles at me, the light catching on her sharp teeth."
+    "She smiles at me, the light catching on her sharp teeth."
 
-    "I swallow heavily as the short-haired felid drops from the ridge. She lands in the lagoon with a splash and wades towards me."
+    "I swallow heavily as the short-haired felid slips into the lagoon and begins to wade towards me."
 
     "Do I run? Panic turns my veins to ice. They'll catch me. Even uninjured, I'll never manage to escape. Bloody and barefoot as I am, it'd be a joke to even try."
 
@@ -158,7 +164,7 @@ label start:
     show myra naked neutral
     with dissolve
 
-    "Jaguar" "\"Taisa! Taisa! A human!  I can’t believe it!\""
+    "Jaguar" "\"Taisa! Taisa! A human! I can’t believe it!\""
 
     show myra naked neutral:
         xalign 0.80
@@ -166,17 +172,20 @@ label start:
 
     with move
 
+    show taisa nude scowl
+    with dissolve
+
     t "\"What are you getting so excited about, Myra? You remember what mother said.\""
 
     "Her voice is as cold as her glare, but somehow I get the feeling the anger isn’t directed at me. Myra bounces on the balls of her feet and makes a petulant whine."
 
-    show myra naked pout:
+    show myra naked smug:
         xalign 0.80
         yalign 1.0
 
     with dissolve
 
-    m "\"But we'll never know for sure if we leave him here!  Come on, Taisa, look at him!  Isn't he cute?\""
+    m "\"But we'll never know for sure if we leave him here! Come on, Taisa, look at him! Isn't he cute?\""
 
     show myra naked blush:
         xalign 0.80
@@ -184,7 +193,10 @@ label start:
 
     with dissolve
 
-    "She licks her lips, and I give a nervous smile in reply.  Looks like the stories were true.  I'm still not sure if that's a good thing or a bad thing.  I guess it's now or never."
+    show taisa nude pout
+    with dissolve
+
+    "She licks her lips, and I give a nervous smile in reply. Looks like the stories were true. I'm still not sure if that's a good thing or a bad thing. I guess it's now or never."
 
     "I..."
 
@@ -200,31 +212,70 @@ label start:
 
         $ running_away = True
 
-        "There's no way I'm taking any chances.  I have to get out of here, and fast."
+        "There's no way I'm taking any chances. I have to get out of here, and fast."
 
-        "I spin on my heel and take off running.  My legs scream out, burning with the sudden effort as I scramble back towards the treeline."
+        "I spin on my heel and take off running. My legs scream out, burning with the sudden effort as I scramble back towards the treeline."
 
-        m "\"Hey!  Where do you think you're going?  Taisa, stop him or something!\""
+        show myra naked pout:
+            xalign 0.80
+            yalign 1.0
+        with dissolve
 
-        t "\"Stop him yourself!  You're the one who wanted to play with him in the first place.\""
+        m "\"Hey!  Where do you think you're going? Taisa, stop him or something!\""
 
-        "Argue away, you two.  Gives me more time to get away."
+        show taisa nude scowl
+        with dissolve
 
-        m "\"Fine, fine.  You always make me do all the work.\""
+        t "\"Stop him yourself! You're the one who wanted to play with him in the first place.\""
 
-        "I'm just feet from the treeline when I hear the patter of bare feet on wet stone and a rush of air.  The hairs on the back of my neck stand on end, and I instinctively dodge to avoid Myra's hand."
+        "Argue away, you two. Gives me more time to get away."
+
+        show myra naked pout at center
+        with move
+
+        show taisa nude shocked at left
+        with move
+
+        show myra naked smug
+
+        m "\"Fine, fine. You always make me do all the work.\""
+
+
+        "I'm just feet from the treeline when I hear the patter of bare feet on wet stone and a rush of air. The hairs on the back of my neck stand on end, and I instinctively dodge to avoid Myra's hand."
+
+        show myra naked smug:
+            parallel:
+                ease .25 zoom 2.0 
+            parallel:
+                linear 0.25 xalign 0.75 yalign 0.25
+    
 
         a "\"Ah-\""
 
         "I duck just as her hand sweeps for my throat, but my feet slip on the uneven ground."
 
-        "I topple backward, bowling over Myra and sending us both tumbling to the damp grass.  I struggle to stand, but Myra pulls me back into her chest, one arm locked around my throat."
+        "I topple backward, bowling over Myra and sending us both tumbling to the damp grass. I struggle to stand, but Myra pulls me back into her chest, one arm locked around my throat."
 
-        m "\"Gotcha!  I'm not letting you go this time!"
+        m "\"Gotcha! I'm not letting you go this time!"
+
+        show taisa nude scowl:
+            ease 0.25 xalign 0.20
+
+        t "\"Myra, you gotta be careful! Don't kill him!"
 
         "I kick for purchase on the grass, but Myra snakes her legs around mine and tightens her grip around my throat.  Darkness closes in on my vision as I fight for breath.  How the hell is she so strong?"
 
+        show myra naked excited:
+            zoom 2.0
+            xalign 0.75 yalign .25
+        with dissolve
+
         m "\"Hey, hey!  No need to fight so much!  I'm not that scary!"
+
+        show myra naked pout:
+            zoom 2.0
+            xalign 0.75 yalign .25
+        with dissolve
 
         m "\"Am I?\""
 
@@ -234,7 +285,15 @@ label start:
 
         "I cough in reply, and in the corner of my hazy vision I see Taisa come up to our side.  She sighs and shakes her head."
 
+        show taisa nude pout:
+            ease 0.25 xalign 0.15
+
         t "\"Myra, I think you're killing him.\""
+
+        show myra naked lewd:
+            zoom 2.0
+            xalign 0.75 yalign .25
+        with dissolve
 
         "Myra lets out an embarrassed squeak and her grip loosens.  I gasp, choking for breath, then immediately I try to break free.  But her grip barely gives at all, and I'm in no shape to fight back."
 
@@ -242,15 +301,26 @@ label start:
 
         #smalltext
 
-        a "\"Alex...\""
+        a "\"{size=-10}Alex...{/size}\""
 
         m "\"What kind of name is that?\""
 
-        "Taisa shrugs."
+        show taisa nude pout:
+            ease 0.25 xalign 0.20
 
-        t "\"A human name I guess.\""
+        t "\"A human name! What kind of name do you think?\""
 
-        m "\"I guess so.\""
+        show taisa nude extra blush:
+            ease 0.25 xalign 0.15
+
+        t "\"Hey! Watch where you're letting him touch you!"
+
+        show myra naked blush:
+            zoom 2.0
+            xalign 0.75 yalign .25
+        with dissolve
+
+        m "\"It's fine! It's fine!\""
 
         "I cough as Myra's grip loosens and she gets out from behind me.  With an almost casual air, she hefts me up to my feet."
 
@@ -258,7 +328,7 @@ label start:
 
         "Her words come muffled, as though she were speaking underwater.  The sudden jerk to my feet sends the blood rushing from my head, and all the hunger and fatigue wash over me at once."
 
-        t "Hey, what do you think you're doing!"
+        t "Hey, there he goes again! Unbelievable..."
 
         "I fall face first into Myra's breasts, her soft skin and the encroaching darkness all but blotting out Taisa's protests.  Myra holds me as my legs give out, pressing my face into her warm cleavage."
 
@@ -272,9 +342,17 @@ label start:
 
         a "\"What a relief, I didn't think I'd find anyone out here. I'm shipwrecked, and I could use your help.\""
 
+        show myra naked neutral:
+            xalign 0.80
+            yalign 1.0
+        with dissolve
+
         m "\"shipwrecked? You came from across the sea?\""
 
         a "\"From Lorca, if that means anything.\""
+
+        show taisa nude serious
+        with dissolve
 
         "By Myra's blank expression, I'll have to assume it doesn't."
 
@@ -282,17 +360,33 @@ label start:
 
         "Another rush of hunger and fatigue hits me.  Now that I've found someone to help me out, my body is starting to give up."
 
+        show myra naked smug:
+            xalign 0.80
+            yalign 1.0
+        with dissolve
+
         m "\"Taisa, we should take him back to the village.  I don't care what mom says, he needs our help!\""
 
         a "\"I need to get to Free Harbor as soon as possible. I appreciate any help you can...\""
 
         "My voice trails off as Taisa stops just in front of me, a hand on her hip. Now that she’s right in front of me, I’m stunned to silence. I follow a bead of water as it trails down her slender side, past her bared entrance, then down her muscular thigh."
 
+        show myra naked blush:
+            xalign 0.80
+            yalign 1.0
+        with dissolve
+
         m "\"Taisa, he's staring~\""
 
-        "I smile as a blush crosses Myra's face. Even through the hunger and exhaustion, a little voice whispers in the back of my mind."
+        show taisa nude extra blush
+        with dissolve
+
+        "I smile as a blush crosses Taisa's face. Even through the hunger and exhaustion, a little voice whispers in the back of my mind."
 
         "Who knew that 'drowning in pussy' would end up being a pun?"
+
+        show taisa nude scowl
+        with dissolve
 
         t "\"See something you like?\""
 
@@ -301,6 +395,9 @@ label start:
         a "\"W-wait, I'm not-\""
 
         "I slip on the wet stone and tumble backward, wheeling my arms in a vain effort to catch myself.  My head strikes the rock and I blink as stars flash before my eyes."
+
+        show taisa nude shocked
+        with dissolve
 
         "Myra shouts, but her words come as though I'm submerged. Myra couches at my side and lifts me onto her thighs as she cradles my face. Taisa stands astride me, looking down with a mixture of guilt and concern on her face."
 
@@ -316,11 +413,13 @@ label start:
 
     label flashback_lorca:
 
-    scene
+    scene black
+    with fade
 
     "The laughter of friends, the warm aroma of pipesmoke and fine liquor."
 
-    #fade in bar
+    show flashback smile
+    with fade
 
     "I turn away as a chilly night breeze rushes through the bar, as a gang of new arrivals pile into the Jewel, my favorite watering hole."
 
@@ -348,17 +447,16 @@ label start:
 
     "Helena" "\"You did! You did!\""
 
-    "Oh, anything but the opera! How am I going to get away with this one?"
+    a "\"Oh Lord! Anything but the opera!\""
 
-    "I catch the stare of the Jewel's master as he comes out with a round of drinks for a nearby table. In the midst of wondering how I can talk the girls out of the opera and into my bed, a sudden realization hits me like a slap in the face."
+    "Time to put that university education to work and figure out how to talk them into my bed intead of the goddamn theatre."
 
-    "Alrich's breath, that fat bastard might check my tab! I need to get out of here before he comes over to collect."
-
-    "I'm prepared to make a quick exit when a flash of navy blue near the entrance catches my eye. I call out, raising my full glass with a wide grin."
+    "Maxine and Helena press in on both sides, and for a moment it looks like I'm cooked. Then I catch a familiar shade of blue at the far end of the room. I raise my glass and shout out."
 
     a "\"Brother!\""
 
-    #matthew CG
+    show flashback matthew standing
+    with fade
 
     "Matthew Nelson marches towards me, his pale face grim. Dressed in the uniform of a Lorcan officer, with a Grenadier's bearskin slung over one arm, his imposing figure parts the crowd around him."
 
@@ -366,7 +464,7 @@ label start:
 
     n "\"Alex, I thought I'd find you here.\""
 
-    "His gaze passes from me to Helena, then to Maxine. His disapproval grows."
+    "His gaze passes from me to Helena, then to Maxine, then back to me. His disapproval grows."
 
     a "\"And now that you're here, you can join us for a drink! Come, come!\""
 
@@ -382,7 +480,8 @@ label start:
 
     "Both women let out a high-pitched \"ahh~\" and lean towards my brother as he pulls out a chair and sits across from us."
 
-    #Matthew sitting
+    show flashback matthew sitting
+    with fade
 
     "Helena" "\"I hope you've given those Vitrian fiends a good thrashing!\""
 
@@ -404,7 +503,7 @@ label start:
 
     "A chill passes down my spine."
 
-    a "Last I heard you were stationed at Fort Acheron.  Why would they recall you?"
+    a "\"Last I heard you were stationed at Fort Acheron.  Why would they recall you?\""
 
     n "The General Staff has good reason to want me back in Lorca."
 
@@ -414,21 +513,31 @@ label start:
 
     "I frown and look away, too embarrassed to meet my brother's stoic gaze."
 
-    n "\”With the plague as bad as it is, I’m surprised this place is even open.  Look at you, reveling while the world burns.\""
+    show flashback matthew arm
+    with fade
+
+    n "\"With the plague as bad as it is, I’m surprised this place is even open.  Look at you, reveling while the world burns.\""
 
     a "\"I hope you didn't come here to lecture me, brother.\""
 
     n "\"No I-\""
 
+    show flashback thugs 
+    with fade
+
     "Matthew pauses as a shadow falls across him and turns to look over his shoulder at the four burly, ill-tempered men that had so suddenly appeared from the crowd."
 
-    #Thugs arrive
+    show flashback exit
+    with fade
 
     "Helena and Martia take their leave- obviously put out of place by our tense conversation. The pair vanishe in a swish of skirts and a torrent of excuses, leaving Matthew and me alone with our new, far less appealing, guests."
 
     "Shabbily-dressed and bearing truncheons on their belts, the men are hardly bear the image of the Jewel's usual clientele. Some of the other patrons stare at our silent confrontation, and all around, the various conversations lull."
 
-    n "\"Buzz off, will you? I have business with my brother.\""
+    show flashback matthew mad
+    with fade
+
+    n "\"Sod off, will you? I have business with my brother.\""
 
     "Thug #1" "\"Aye, as do we.\""
 
@@ -438,12 +547,9 @@ label start:
 
     a "\"Doctor.\""
 
-    "Thug #1" "\"Doctor Wray then, if it please you. You owe quite a penny to Mister Crawlitch, and we've been hired to collect.\""
+    "Thug #1" "\"Doctor Wray then, if it please you. You owe quite a penny and we've been hired to collect.\""
 
-    "Matthew looks up at the man in disbelief, then turns his reproach fully onto me. Mister Arlan Crawlitch was well-known to us both. A government clerk who'd managed to bribe his way into the judge's bench, and now made his living buying other men's debts."
-
-    "Lucky me, I suppose. Instead of owning a hundred men a bit of money, now I owe a lot of money to one thoroughly unpleasant man."
-
+    "Matthew looks up at the man in disbelief, then turns his reproach fully onto me."
     n "\"How much?\""
 
     "I shrink back as he growls at me. There's no way I can answer that!"
@@ -458,7 +564,7 @@ label start:
 
     "I lick my suddenly dry lips and smile nervously."
 
-    a "\"Surely Mister Crawlitch sent terms?\""
+    a "\"Surely your patron has proposed terms?\""
 
     "Thug #1" "\"He's got terms for ya', pay up, or you'll be in a debtor's prison before the end of the week.\""
 
@@ -468,19 +574,13 @@ label start:
 
     "He turns to the men."
 
-    n "\"The Lorcan army has official business with this man, and I've been empowered by the Coalition General Staff to do what is necessary to see it through. Your debts can wait.\""
-
-    "The two men exchange nervous glances. The mangy fellow reaches into his shirt and retrieves a sweat-stained writ, stamped with the official seal of the Lorcan Middle Court."
-
-    "Thug #1"  "\"It's outta my hands, Sir, beg your pardon. I've got to take him if he won't pay.\""
-
     "Matthew stands and wrenches me to my feet before fixing the collector with a withering glare."
 
     n "\"The Lorcan army does not appreciate the civil service meddling in its affairs. Good day sir.\""
 
-    "But the collectors don't budge, and soon another group shoves their way through the gathering crowd. Now seven in all, the men hem us in against the low fence. His confidence renewed by the arrival of his friends, the thug grins and pats his truncheon."
+    "But the collectors don't budge, and soon another group shoves their way through the gathering crowd. Now seven in all, the men hem us in against the booth. His confidence renewed by the arrival of his friends, the thug grins and pats his truncheon."
 
-    "Thug #1"  "\"Come on, boss.  Let's get a move on.\""
+    "Thug #1"  "\"Come on, boss. Let's get a move on.\""
 
     n "\"Run.\""
 
@@ -488,7 +588,8 @@ label start:
 
     n "\"Run, you idiot!\""
 
-    #flash, then elbow strike
+    show flashback fight
+    with dissolve
 
     "Before the bailiffs or I understand what's going on, Matthew spins about and decks the first thug with a monstrous blow. The others scatter as Matthew lays into them, roaring."
 
@@ -500,15 +601,13 @@ label start:
 
     "I burst through the door and rush down the city street, dodging through alleys and storefronts as I make my bid for safety."
 
-    scene
-
-    scene
-
-    #add in some dialogue choices here.
+    scene alleyway
+    with fade
 
     "I pause for a rest in the shadow of an alleyway.  Mere minutes later, Matthew joins me."
 
-    #matthew sprite
+    show matthew serious
+    with dissolve
 
     "His face is only a slight red, beaded with the faintest sheen of sweat."
 
@@ -522,13 +621,11 @@ label start:
 
     a "\"They still might. It’s not like I can leave the city while the Headmaster still has work for me.\""
 
-    n "\"I've see to that.\""
+    n "\"I've seen to that.\""
 
-    "He reaches into his jacket and removes an envelope, crumpled almost beyond recognition yet still bearing the seal of the Lorcan High Council. I cock my head, and a grim smile spreads across my brother's face."
+    "He reaches into his jacket and removes an envelope, crumpled almost beyond recognition yet still bearing the seal of the Lorcan High Council. I cock my head in confusion."
 
-    a "\"You're smiling.  That's not a good sign.\""
-
-    n "\"You should be grateful.  I did solve your little debt problem, but it involves conscripting you into the Lorcan Army.  Congratulations, you're now a 2nd Lieutenant.\""
+    n "\"You should be grateful. I did solve your little debt problem, but it involves conscripting you into the Lorcan Army.  Congratulations, you're now a 2nd Lieutenant.\""
 
     a "\"You're joking?  What in frigid hell could the General Staff want with an underachieving doctor?"
 
@@ -542,7 +639,7 @@ label start:
 
     n "\"They're quite serious, I assure you.\""
 
-    "This is unbelievable.  Conscription is one thing, but this is something else.  I'm not saying one thing or another until he can answer a few of my questions."
+    "This is unbelievable. Conscription is one thing, but this is something else. I'm not saying one thing or another until he can answer a few of my questions."
 
     menu flashback_questions:
 
