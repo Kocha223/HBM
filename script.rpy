@@ -14,6 +14,8 @@ define n = Character ("Matthew")
 
 label start:
 
+    stop music fadeout 1.0
+
     scene black
 
     "Crewman" "\"Doctor? Doctor are you awake?\""
@@ -131,24 +133,28 @@ label start:
         linear 3.0 xpos 0 ypos 0 zoom 1.25
     with fade
 
-    pause 5
+    $ renpy.pause(2, hard=True)
 
     show lagooncg1:
         xpos -3750 ypos -1500 zoom 2
         linear 6.0 xpos -3750 ypos -300 zoom 2
     with fade
 
-    pause 8
+    $ renpy.pause(3, hard=True)
 
     "My gaze trails up their nude forms, pausing upon the spots dotting their thighs and shoulders, and again on their rounded, feline ears. Monsterfolk. Jaguars to be precise."
-
+    
     show lagooncg1:
         xalign 1.0 yalign 1 zoom 0.65
-    with dissolve
+    with fade
 
     "The two glance at each other, then back at me, their tails swishing curiously behind them. The first, a lithe girl with a fringe of sunkissed hair and sharp features, gives me a contemptuous sneer."
 
     "The other is almost her opposite. Her full body oozes sensuality. My eyes are drawn again and again to her thick, welcoming thighs."
+
+    show lagooncg2:
+        xalign 1.0 yalign 1 zoom 0.65
+    with dissolve
 
     "She smiles at me, the light catching on her sharp teeth."
 
@@ -160,8 +166,8 @@ label start:
 
     "I scramble to my feet and smile as the curvier of the two turns to the other."
 
-    scene lagoon
-    show myra naked neutral
+    scene lagoon with fadeIn
+    show myra naked neutral at posCentre
     with dissolve
 
     "Jaguar" "\"Taisa! Taisa! A human! I can’t believe it!\""
@@ -172,7 +178,7 @@ label start:
 
     with move
 
-    show taisa nude scowl
+    show taisa nude scowl at posLeft
     with dissolve
 
     t "\"What are you getting so excited about, Myra? You remember what mother said.\""
@@ -270,7 +276,7 @@ label start:
             xalign 0.75 yalign .25
         with dissolve
 
-        m "\"Hey, hey!  No need to fight so much!  I'm not that scary!"
+        m "\"Hey, hey! No need to fight so much! I'm not that scary!"
 
         show myra naked pout:
             zoom 2.0
@@ -597,16 +603,16 @@ label start:
 
     a "I'll leave the riff-raff to you, brother!"
 
-    "I leap over the booth and make for the door.  Behind me, Matthew's laughter fills the room, almost loud enough to drown out the groans of his victims."
+    "I leap over the booth and make for the door. Behind me, Matthew's laughter fills the room, almost loud enough to drown out the groans of his victims."
 
     "I burst through the door and rush down the city street, dodging through alleys and storefronts as I make my bid for safety."
 
     scene alleyway
     with fade
 
-    "I pause for a rest in the shadow of an alleyway.  Mere minutes later, Matthew joins me."
+    "I pause for a rest in the shadow of an alleyway. Mere minutes later, Matthew joins me."
 
-    show matthew serious
+    show matthew serious at posCentre
     with dissolve
 
     "His face is only a slight red, beaded with the faintest sheen of sweat."
@@ -617,7 +623,9 @@ label start:
 
     a "\"No, we parted ways. I’ve come to realize that screwing married women is an exercise in marginal utility.\""
 
-    n "\"But really, Alex.  You’re lucky I was there. Those men would have given you something to complain about.\""
+    "Matthew sighs."
+
+    n "\"Really, Alex. You’re lucky I was there. Those men would have given you something to complain about.\""
 
     a "\"They still might. It’s not like I can leave the city while the Headmaster still has work for me.\""
 
@@ -625,7 +633,7 @@ label start:
 
     "He reaches into his jacket and removes an envelope, crumpled almost beyond recognition yet still bearing the seal of the Lorcan High Council. I cock my head in confusion."
 
-    n "\"You should be grateful. I did solve your little debt problem, but it involves conscripting you into the Lorcan Army.  Congratulations, you're now a 2nd Lieutenant.\""
+    n "\"You should be grateful. I did solve your little debt problem, but it involves conscripting you into the Lorcan Army. Congratulations, you're now a 2nd Lieutenant.\""
 
     a "\"You're joking?  What in frigid hell could the General Staff want with an underachieving doctor?"
 
@@ -639,7 +647,11 @@ label start:
 
     n "\"They're quite serious, I assure you.\""
 
-    "This is unbelievable. Conscription is one thing, but this is something else. I'm not saying one thing or another until he can answer a few of my questions."
+    "This is unbelievable. I'd half-expected to be conscripted into the Army Surgeon Corps, but this is something else."
+
+    a "\"I have questions, and you better have answers.\""
+
+    n "\"Ask away. Though knowing you, I have a feeling you won't like any of the answers.\""
 
     menu flashback_questions:
 
@@ -649,13 +661,13 @@ label start:
         "\"Is this really worth the trouble?\"":
             jump last_hope
 
-        "\"Does the General Staff really believe I'm the right man for the job?\"":
+        "\"{color=00ccff} Am I the right man for the job?{/color}\"":
             jump lazy_doctor
 
     label palebloom_explanation:
         $ palebloom_explanation = True
 
-        a "\"The Pale Bloom is a myth, Matthew, as is the exilir it creates.  This was first year stuff at the medical institute.\""
+        a "\"The Pale Bloom is a myth, Matthew, as is the exilir it creates. This was first year stuff at the medical institute.\""
 
         n "\"You're wrong, and there's proof.\""
 
@@ -663,20 +675,20 @@ label start:
 
         a "\"Show me then.\""
 
-        n "\"Not that kind of proof, you dumb bastard.  One of our agents in Tetra Magna has sent over a few fossilized samples.  She at least, believes the rumors.\""
+        n "\"Not that kind of proof, you stupid bastard. One of our agents in Tetra Magna has sent over a few fossilized samples. She at least, believes the rumors.\""
 
         a "\"So you have the word of one doctor to go on?\""
 
-        n "\"Would you believe the Vitrians?  Our spies have noticed a twofold increase in their shipments to Tetra.\""
+        n "\"Would you believe the Vitrians? Our spies have noticed a twofold increase in their shipments to Tetra.\""
 
-        n "\"The plague hit them harder than it did us.  If they could find a cure, their advantage would be absolute.\""
+        n "\"The plague hit them harder than it did us. If they could find a cure, their advantage would be absolute.\""
 
         jump flashback_questions
 
     label last_hope:
         $ last_hope = True
 
-        a "\"is this business really worth the trouble, Matthew?\""
+        a "\"Is this business really worth the trouble, Matthew?\""
 
         n "\"The General Staff has devoted substantial resources to the operation, yes.\""
 
@@ -693,13 +705,11 @@ label start:
     label lazy_doctor:
         $ lazy_doctor = True
 
-        a "\"This is ridiculous.  I'm the man they want to send?\""
-
-        a "\"And I’m the man they want to send?\""
+        a "\"This is ridiculous. I'm the man the General Staff decided to send?\""
 
         n "\"You’re the son of Argus Nelson, the greatest explorer of our age.\""
 
-        a "\"And so are you.\""
+        a "\"What does that make you?\""
 
         n "\"I never took to his lessons like you did.\""
 
@@ -968,11 +978,33 @@ label start:
         "\"Tell me more about your mother.\"":
             jump lyra_explanation
 
-        "\"Where did I wash ashore, anyway?\"":
+        "\"Where did I wash ashore, anyway?":
             jump the_stripes
 
-        "\"Do you think she might be able to help me?\"":
+        "\"Do you think she might be able to help me?\""
             jump visiting_the_queen
+
+    label lyra_explanation:
+        $ lyra_explanation = True
+
+        a "\"Tell me more about your mother.."
+
+        m "\"Mom? What's there to know?\""
+
+        jump village_questions
+
+    label the_stripes:
+        $ the_stripes = True
+
+        a "\"Where in Alrich's name did I wash ashore, anyway?\""
+
+        jump village_questions
+
+
+    label visiting_the_queen:
+        $ visiting_the_queen = True
+
+        a "\"I wonder if the Queen would be able to help me out.\""
 
 
 
